@@ -3,14 +3,14 @@ vim.g.maplocalleader = "\\"
 
 local keymap = vim.keymap -- for conciseness
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with <jk>"})
+keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with <jk>" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- buffers
-keymap.set("n", "<C-c>", ":bn<cr>", { desc = "Go to next buffer"})
-keymap.set("n", "<C-z>", ":bp<cr>", { desc = "Close buffer"})
-keymap.set("n", "<C-x>", ":bd<cr>", { desc = "Go to previous buffer"})
+keymap.set("n", "<C-c>", ":bn<cr>", { desc = "Go to next buffer" })
+keymap.set("n", "<C-z>", ":bp<cr>", { desc = "Close buffer" })
+keymap.set("n", "<C-x>", ":bd<cr>", { desc = "Go to previous buffer" })
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
@@ -47,3 +47,6 @@ keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file e
 keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
 keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
 keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+
+-- markdown-preview
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
